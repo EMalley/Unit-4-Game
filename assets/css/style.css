@@ -1,0 +1,29 @@
+body {
+    background-image: url(../images/whitediamond.png)
+}
+
+.title {
+    background-color: #dddddd;
+    font-size: 45px;
+}
+
+#newGameBtn {
+    border:none;
+    border-style:none;
+    border-radius: 20px;
+    background-color:#aedb76 ;
+    color: #ffffff;
+    font-size: 26px;
+    box-shadow: 5px, 10px, #808080;
+    margin-top:6px;
+    cursor: pointer;
+    outline:none;
+}
+
+.crystals {
+    border: 2px;
+    border-style: solid;
+    height: 200px;
+    width:200px;
+    border-spacing: 2px;
+}
