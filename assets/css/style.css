@@ -16,14 +16,24 @@ body {
     border:none;
     border-style:none;
     border-radius: 20px;
-    background-color:#aedb76 ;
+    background-color:#6eb11c ;
     color: #ffffff;
     font-size: 26px;
-    box-shadow: 5px, 10px, #808080;
+    box-shadow: 0 6px #808080;
     margin-top:6px;
     cursor: pointer;
     outline:none;
-    
+}
+
+#newGameBtn:active{
+    transform: translateY(3px);
+    box-shadow: #636262
+}
+
+#result {
+    display: inline;
+    font-size: 28;
+    margin: auto;
 }
 
 .crystals {
@@ -31,7 +41,5 @@ body {
     border-style: solid;
     height: 100px;
     width:100px;
-    margin: 5px;
-    
-    
+    margin: 5px;  
 }
