@@ -37,9 +37,6 @@ body {
 }
 
 .crystals {
-    border: 2px;
-    border-style: solid;
-    height: 100px;
+    height:100px;
     width:100px;
-    margin: 5px;  
 }

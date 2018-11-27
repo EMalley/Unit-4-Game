@@ -23,26 +23,24 @@ $(document).ready(function () {
 
     // crystal score needs to add on to the previous score
 
-    // each new game, crystals should reset and be a new vaule between 1-12
-
     // check win === total score
 
     // check loose (goes over Score)
 
     // reset crystal/winning score after win or loose
-
+    // each new game, crystals should reset and be a new vaule between 1-12
     $("#newGameBtn").click(function () {
         // reset crystals
         for (var i = 0; i < 4; i++) {
             var random = Math.floor(Math.random() * 12) + 1;
             console.log(random);
-            $('.crystalArea').append('<div class="crystals"></div');
+            $('.crystalArea').attr('<div class="crystals"></div');
         };
         // reset Winning Number
         randomResult = Math.floor(Math.random() * 100 + 20)
         $("#result").html('Number To Win: ' + randomResult);
         console.log(randomResult);
-        console.log("--------------------------")
+        console.log("--------------------------");
     });
 });
 
