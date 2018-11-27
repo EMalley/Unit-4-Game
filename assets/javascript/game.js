@@ -3,8 +3,8 @@ $(document).ready(function () {
 
     // load Javascript After Document is ready
     var randomResult;
-    var wins;
-    var lose;
+    var wins = 0
+    var lose = 0
 
     // Chooses Random Number to reach to win game. between 19-120
     randomResult = Math.floor(Math.random() * 100 + 20)
@@ -16,9 +16,14 @@ $(document).ready(function () {
         var random = Math.floor(Math.random() * 12) + 1;
         console.log(random);
         $('.crystalArea').append('<div class="crystals"></div');
-        // assign onclick data to each crystal box
-
+        $(".crystals").attr({
+            "data-random": random
+        });
     };
+    // assign onclick data to each crystal box
+    $('.crystals').click(function () {
+        console.log($(this).attr('data-random'));
+    });
     console.log("--------------------------")
 
     // crystal score needs to add on to the previous score
