@@ -16,6 +16,7 @@ $(document).ready(function () {
     for (var i = 0; i < 4; i++) {
         var random = Math.floor(Math.random() * 12) + 1;
         console.log(random);
+
         var id = "#crystal-" + (i + 1);
         $(id).attr({
             "data-random": random
@@ -23,28 +24,26 @@ $(document).ready(function () {
     };
 
     // assign onclick data to each crystal box
+    $("#currentScore").html('Current Score: ' + currentScore)
     $('.crystals').click(function () {
         console.log($(this).attr('data-random'));
+        console.log("------------------------------")
+
+        // crystal score needs to add on to the previous score
+        currentScore = parseInt($(this).attr("data-random")) + currentScore
+        $("#currentScore").html("Current Score: " + currentScore);
+
     });
-    console.log("--------------------------")
-
-    // crystal score needs to add on to the previous score
-    $("#currentScore").html('Current Score: ' + currentScore)
-
-
-
-
-
 
     // check win === total score
     $("#wins").html("Wins: " + wins);
-    if (currentScore === randomResult) {
+    if (randomResult === currentScore) {
         wins++;
         alert("You Win!")
     }
     // check loose (goes over Score)
     $("#losses").html("Losses: " + lose);
-    if (currentScore > randomResult) {
+    if (randomResult < currentScore) {
         lose++;
         alert("Score too high! You loose!");
     }
@@ -59,13 +58,16 @@ $(document).ready(function () {
             $(id).attr({
                 "data-random": random
             });
-        };   
-        console.log("--------------------------"); 
+        };
+        console.log("--------------------------");
         // reset Winning Number
         randomResult = Math.floor(Math.random() * 100 + 20)
         $("#result").html('Number To Win: ' + randomResult);
         console.log(randomResult);
         console.log("--------------------------");
+
+        // set Current Score To 0
+      
+
     });
 });
-
