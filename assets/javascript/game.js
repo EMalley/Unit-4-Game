@@ -36,17 +36,17 @@ $(document).ready(function () {
     });
 
     // check win === total score
-    $("#wins").html("Wins: " + wins);
+    // $("#wins").html("Wins: " + wins);
     if (randomResult === currentScore) {
         wins++;
-        alert("You Win!")
-    }
+        alert("You Win!");
+    };
     // check loose (goes over Score)
-    $("#losses").html("Losses: " + lose);
-    if (randomResult < currentScore) {
+    // $("#losses").html("Losses: " + lose);
+    if (currentScore > randomResult) {
         lose++;
         alert("Score too high! You loose!");
-    }
+    };
 
     // each new game, crystals should reset and be a new vaule between 1-12
     $("#newGameBtn").click(function () {
@@ -67,7 +67,9 @@ $(document).ready(function () {
         console.log("--------------------------");
 
         // set Current Score To 0
-      
-
+        $("#newGameBtn").click(function () {
+            currentScore = 0           
+        });
+        $("#currentScore").html("Current Score: 0")
     });
 });
