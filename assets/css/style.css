@@ -2,6 +2,11 @@ body {
     background-image: url(../images/whitediamond.png)
 }
 
+hr {
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+}
+
 .title {
     background-color: #dddddd;
     font-size: 45px;
@@ -30,7 +35,13 @@ body {
     box-shadow: #636262
 }
 
-#result {
+#result{
+    display: inline;
+    font-size: 28;
+    margin: auto;
+}
+
+#currentScore {
     display: inline;
     font-size: 28;
     margin: auto;

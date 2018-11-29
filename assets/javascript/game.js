@@ -3,6 +3,7 @@ $(document).ready(function () {
 
     // load Javascript After Document is ready
     var randomResult;
+    var currentScore = 0
     var wins = 0
     var lose = 0
 
@@ -15,11 +16,12 @@ $(document).ready(function () {
     for (var i = 0; i < 4; i++) {
         var random = Math.floor(Math.random() * 12) + 1;
         console.log(random);
-        $('.crystalArea').append('<div class="crystals"></div');
-        $(".crystals").attr({
+        var id = "#crystal-" + (i + 1);
+        $(id).attr({
             "data-random": random
         });
     };
+
     // assign onclick data to each crystal box
     $('.crystals').click(function () {
         console.log($(this).attr('data-random'));
@@ -27,20 +29,38 @@ $(document).ready(function () {
     console.log("--------------------------")
 
     // crystal score needs to add on to the previous score
+    $("#currentScore").html('Current Score: ' + currentScore)
+
+
+
+
+
 
     // check win === total score
-
+    $("#wins").html("Wins: " + wins);
+    if (currentScore === randomResult) {
+        wins++;
+        alert("You Win!")
+    }
     // check loose (goes over Score)
+    $("#losses").html("Losses: " + lose);
+    if (currentScore > randomResult) {
+        lose++;
+        alert("Score too high! You loose!");
+    }
 
-    // reset crystal/winning score after win or loose
     // each new game, crystals should reset and be a new vaule between 1-12
     $("#newGameBtn").click(function () {
         // reset crystals
         for (var i = 0; i < 4; i++) {
             var random = Math.floor(Math.random() * 12) + 1;
             console.log(random);
-            $('.crystalArea').attr('<div class="crystals"></div');
-        };
+            var id = "#crystal-" + (i + 1);
+            $(id).attr({
+                "data-random": random
+            });
+        };   
+        console.log("--------------------------"); 
         // reset Winning Number
         randomResult = Math.floor(Math.random() * 100 + 20)
         $("#result").html('Number To Win: ' + randomResult);
