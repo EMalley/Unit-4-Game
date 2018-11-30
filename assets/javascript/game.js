@@ -43,7 +43,7 @@ $(document).ready(function () {
     $("#losses").html("Losses: " + lose);
     if (currentScore > randomResult) {
         lose++;
-        alert("Score too high! You loose!");
+        alert("Too bad, So sad! You loose!");
     };
 
     });
