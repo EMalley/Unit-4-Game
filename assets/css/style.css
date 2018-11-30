@@ -48,6 +48,28 @@ hr {
 }
 
 .crystals {
+    display: inline-block;
     height:100px;
     width:100px;
 }
+
+.crystals:hover {
+    cursor: -webkit-grab;
+    transform: scale(1.05);
+}
+
+.crystals:active {
+    cursor: -webkit-grabbing;
+    transform: scale(.95);
+     
+ }
+
+ #blocker {
+     display:none;
+     height: 600px;
+     width:100%;
+     background-color:white;
+     opacity: .1;
+     position: fixed;
+     top: 0;
+ }
