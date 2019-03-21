@@ -1,5 +1,19 @@
 body {
-    background-image: url(../images/whitediamond.png)
+    background-image: url(../images/whitediamond.png);
+    height: 100vh;
+}
+
+h1{
+    color: #285eff;
+    font-family: 'Germania One', cursive;
+    font-size: 72px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+
+}
+
+#result , #currentScore{
+    font-family: 'Germania One', cursive;
 }
 
 hr {
@@ -12,57 +26,68 @@ hr {
     font-size: 45px;
 }
 
+.jumbotron {
+    background: none;
+}
+
 .instructions {
     border-style: inset;
     border-color: #000000;
+    font-family: 'Hammersmith One', sans-serif;
 }
 
 #newGameBtn {
     border:none;
     border-style:none;
-    border-radius: 20px;
-    background-color:#6eb11c ;
+    border-radius: 15px;
+    background-color:#45ff02 ;
     color: #ffffff;
     font-size: 26px;
-    box-shadow: 0 6px #808080;
+    box-shadow: 0 3px #808080;
     margin-top:6px;
     cursor: pointer;
     outline:none;
+    font-family: 'Germania One', cursive;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+
 }
 
 #newGameBtn:active{
     transform: translateY(3px);
     box-shadow: #636262
+    
 }
 
-#result{
+#result, #currentScore{
     display: inline;
     font-size: 28;
     margin: auto;
+    color: #ff8528;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
 }
 
-#currentScore {
-    display: inline;
-    font-size: 28;
-    margin: auto;
+
+.crystalarea {
+    display: inline-block;
 }
 
 .crystals {
-    display: inline-block;
-    height:100px;
-    width:100px;
+    opacity: .5;
 }
 
 .crystals:hover {
     cursor: -webkit-grab;
     transform: scale(1.05);
+    opacity: 1;
 }
 
 .crystals:active {
     cursor: -webkit-grabbing;
-    transform: scale(.95);
-     
- }
+    transform: scale(.95); 
+    opacity: 1; 
+}
 
  #blocker {
      display:none;
@@ -72,4 +97,8 @@ hr {
      opacity: .1;
      position: fixed;
      top: 0;
+ }
+
+ #wins, #losses {
+     font-size: 30px
  }

@@ -27,7 +27,6 @@ $(document).ready(function () {
 
     // assign onclick data to each crystal box
     $("#currentScore").html('Current Score: ' + currentScore)
-
     $('.crystals').click(function () {
         console.log($(this).attr('data-random'));
         console.log("------------------------------");
@@ -39,7 +38,7 @@ $(document).ready(function () {
         }
 
         // check win === total score
-        $("#wins").html("Wins: " + wins);
+        $("#wins").text("Wins: " + wins);
         if (randomResult === currentScore) {
             $("#currentScore").html("Current Score: " + currentScore);
             wins++;
@@ -47,7 +46,7 @@ $(document).ready(function () {
             alert("You Win!");
         };
         // check loose (goes over Score)
-        $("#losses").html("Losses: " + lose);
+        $("#losses").text("Losses: " + lose).show();
         if (currentScore > randomResult) {
             lose++;
             alert("Too bad, So sad! You loose!");
