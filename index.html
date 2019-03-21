@@ -15,45 +15,47 @@
 </head>
 
 <body>
-    <div class="container text-center title py-5">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Crystal Collector!</h1>
-                <p><button id="newGameBtn">New Game</button></p>
-            </div>
-            <div id="result"> </div>
-            <div id="currentScore"></div>
-        </div>
-    </div>
-
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 instructions">
-                    <h3>Instructions</h3>
-                    <P>A random number will be given at the start of the game.</P>
-                    <p>The object of the game is to click on the crystals to match your current score, to the "winning
-                        score" value.</p>
-                    <p>You loose the game if your score goes above the "winning score" value.<br> Good Luck!</p>
-                    <hr>
-                    <div id="wins"></div>
-                    <div id="losses"></div>
-                </div>
-
-                <div class="col-md-6 text-center">
-                    <div class="crystalArea row">
-                        <div class="col-md-6">
-                            <input type="image" src="assets/images/Aquamarine_gemstone.png" id="crystal-1" class="crystals">
-                            <input type="image" src="assets/images/Blue_diamond_Gem.png" id="crystal-2" class="crystals">
-                            <input type="image" src="assets/images/Yellow_Diamond_Gemstone.png" id="crystal-3" class="crystals">
-                            <input type="image" src="assets/images/Clear_Diamond_gem.png" id="crystal-4" class="crystals">
+    <div class="jumbotron">
+            <div class="container text-center title py-5">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>Crystal Collector!</h1>
+                            <p><button id="newGameBtn">New Game</button></p>
                         </div>
+                        <div id="result"> </div>
+                        <div id="currentScore"></div>
                     </div>
                 </div>
-                <div id="blocker"></div>
-            </div>
-        </div>
-
+            
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 instructions">
+                                <h3>Instructions</h3>
+                                <P>A random number will be given at the start of the game.</P>
+                                <p>The object of the game is to click on the crystals to match your current score, to the "winning
+                                    score" value.</p>
+                                <p>You loose the game if your score goes above the "winning score" value.<br> Good Luck!</p>
+                                <hr>
+                                <div id="wins"></div>
+                                <div id="losses"></div>
+                            </div>
+            
+                            <div class="col-md-6 text-center">
+                                <div class="crystalArea row">
+                                    <div class="col-md-6">
+                                        <input type="image" src="assets/images/Aquamarine_gemstone.png" id="crystal-1" class="crystals">
+                                        <input type="image" src="assets/images/Blue_Diamond_Gem.png" id="crystal-2" class="crystals">
+                                        <input type="image" src="assets/images/Yellow_Diamond_Gemstone.png" id="crystal-3" class="crystals">
+                                        <input type="image" src="assets/images/Clear_Diamond_Gem.png" id="crystal-4" class="crystals">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="blocker"></div>
+                        </div>
+                    </div>
+            
+    </div>
 </body>
 
 </html>

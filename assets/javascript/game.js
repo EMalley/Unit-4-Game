@@ -37,7 +37,7 @@ $(document).ready(function () {
             currentScore = parseInt($(this).attr("data-random")) + currentScore
             $("#currentScore").html("Current Score: " + currentScore);
         }
-        
+
         // check win === total score
         $("#wins").html("Wins: " + wins);
         if (randomResult === currentScore) {
